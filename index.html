@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <style>
+        h3 {
+            padding: 18px 0;
+        }
+        .termo {
+            padding-left: 72px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="display-3">Bem-vindo ao exercício sobre Bootstrap - Luiz Felipe Rangel</h1>
+    <div class="alert alert-warning h4">
+        Você tambem pode aprender mais sobre Bootstrap acessando o <a href="https://getbootstrap.com/">site oficial</a> !!
+    </div>
+    <div class="container">
+        <h3>Formulário abaixo:</h3>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label class="form-label" for="nome">Digite o seu nome:</label>
+                <input class="form-control" type="text" id="nome" required>
+                <div class="valid-feedback">
+                    Correto
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="email" class="form-label">Digite o seu e-mail:</label>
+                <input type="email" id="email" class="form-control" required>
+                <div class="form-text">O seu e-mail não será compartilhado com terceiros</div>
+                <div class="valid-feedback">
+                    Correto
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="telefone" class="form-label">Digite o seu telefone:</label>
+                <input type="number" id="telefone" class="form-control" required>
+                <div class="form-text">O telefone deve conter o DDD</div>
+                <div class="valid-feedback">
+                    Correto
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="sexo" class="form-label">Selecione o seu sexo:</label>
+                <select class="form-select col-md-4" id="sexo">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="1">Feminino</option>
+                    <option value="2">Masculino</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="pais" class="form-label">Escolha o país de origem:</label>
+                <input list="opcoesDePaises" id="pais" class="form-control">
+                <datalist id="opcoesDePaises">
+                    <option value="Brasil">
+                    <option value="portugal">
+                    <option value="EUA">
+                    <option value="Londres">
+                    <option value="Russia">
+                    <option value="Japão">
+                </datalist>
+            </div>
+            <div class="md-3">
+                <label for="mensagem" class="form-label">Deixe a sua mensagem:</label>
+                <textarea id="mensagem" class="form-control" rows="3" required></textarea>
+                <div class="invalid-feedback">
+                    É necessário escrever uma mensagem !!
+                </div>
+            </div>
+            <div class="form-check form-switch termo">
+                <label class="form-check-label alert alert-primary" for="aceito-termos">Li e concordo com os termos do site / <a href="#">Leia aqui os termos</a></label>
+                <input class="form-check-input h3" type="checkbox" id="aceito-termos" required>
+                <div class="invalid-feedback">
+                    É obrigatório aceitar o termo para continuar
+                </div>
+            </div>
+            <button class="btn btn-primary col-md-5">Enviar</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
